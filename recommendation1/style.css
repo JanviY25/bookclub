@@ -46,8 +46,6 @@
 .recommendations .subheading {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   align-self: stretch;
   font-family: var(--subheading-font-family);
   font-weight: var(--subheading-font-weight);
@@ -143,7 +141,7 @@
   top: 223px;
   left: 771px;
   width: 515px;
-  font-family: "Josefin Slab-Regular", Helvetica;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 400;
   color: #000000;
   font-size: 30px;

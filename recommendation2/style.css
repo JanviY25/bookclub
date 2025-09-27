@@ -46,8 +46,6 @@
 .recommendations .subheading {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   align-self: stretch;
   font-family: var(--subheading-font-family);
   font-weight: var(--subheading-font-weight);

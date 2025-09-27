@@ -289,7 +289,7 @@
 .reviews .text-wrapper-5 {
   position: relative;
   align-self: stretch;
-  font-family: "Kiwi Maru-Medium", Helvetica;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 500;
   color: #000000;
   font-size: 40px;
@@ -300,8 +300,6 @@
 .reviews .text-wrapper-6 {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   align-self: stretch;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
@@ -362,8 +360,6 @@
 .reviews .text-wrapper-8 {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   align-self: stretch;
   font-family: var(--subheading-font-family);
   font-weight: var(--subheading-font-weight);
