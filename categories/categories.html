@@ -6,52 +6,74 @@
   <link rel="stylesheet" href="globals.css" />
   <link rel="stylesheet" href="styleguide.css" />
   <link rel="stylesheet" href="style.css" />
-    <style>
-        .categories .navigation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            background-color: #ffffff;
-            z-index: 100;
-            padding: 0 80px; /* Aligns content with your original design's margins */
-            box-sizing: border-box;
-        }
+    <!-- CRITICAL FIX: Define fixed header layout and content offset rules -->
+    <style>
+        /* Reset the body padding we tried earlier, the new approach uses a content wrapper */
+        body {
+            padding-top: 0 !important; 
+        }
 
-        /* Remove conflicting fixed margins from children */
-        .categories .text-wrapper-13 {
-            margin-top: 0 !important;
-            margin-left: 0 !important;
-        }
-        .categories .items-wrapper {
-            margin-top: 0 !important;
-            margin-right: 0 !important;
-        }
-    </style>
+        /* 1. Force the Navigation to be fixed, full width, and on top */
+        .categories .navigation {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            height: 80px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            width: 100% !important;
+            background-color: #ffffff !important;
+            z-index: 1000 !important;
+            padding: 0 40px !important; 
+            box-sizing: border-box !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        }
+
+        /* 2. Create the wrapper for all content below the header, starting at 80px down */
+        .content-wrapper-offset {
+            margin-top: 80px !important; /* Must match the header height */
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Secondary nav items display */
+        .categories .items-wrapper, 
+        .categories .items-4 {
+            display: flex !important;
+            align-items: center !important;
+            white-space: nowrap !important;
+            gap: 20px !important;
+        }
+        
+    </style>
 </head>
 <body>
 
   <div class="categories">
-    
-    <div class="navigation">
-        <a href="../home page/homepage.html" class="text-wrapper-13">Beyond The Pages - The Book Club</a>
-        
-        <div class="items-wrapper">
-            <div class="items-4">
-                <a href="../categories/categories.html" class="text-wrapper-14">Genres</a> 
-                <a href="../reviews/reviews.html" class="text-wrapper-14">Reviews</a>
-                <a href="../recommendation1/recommendation1.html" class="text-wrapper-14">Recommendations</a>
-                <button class="button-2">
-                    <a href="../aboutus/aboutus.html" class="text-wrapper-15">About Us</a>
-                </button>
-            </div>
-        </div>
-    </div>
-        <div class="navigation-footer">
+    
+    <!-- FIXED HEADER SECTION (Unchanged from last attempt, but styles moved to <style> block) -->
+    <div class="navigation">
+        <a href="../home page/homepage.html" class="text-wrapper-13">Beyond The Pages - The Book Club</a>
+        
+        <div class="items-wrapper">
+            <div class="items-4">
+                <a href="../categories/categories.html" class="text-wrapper-14">Genres</a> 
+                <a href="../reviews/reviews.html" class="text-wrapper-14">Reviews</a>
+                <a href="../recommendation1/recommendation1.html" class="text-wrapper-14">Recommendations</a>
+                <button class="button-2">
+                    <a href="../aboutus/aboutus.html" class="text-wrapper-15">About Us</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW CONTENT WRAPPER to push everything below the 80px fixed header -->
+    <div class="content-wrapper-offset">
+    
+    
+    <!-- FOOTER -->
+    <div class="navigation-footer">
       <div class="items">
                 <a href="../aboutus/aboutus.html" class="text-wrapper">About Us</a>
         <a href="../categories/categories.html" class="div">All Genres</a> 
@@ -78,20 +100,23 @@
       <img class="divider" src="divider.png" />
     </div>
 
+    <!-- MAIN QUOTE -->
     <p class="a-reader-lives-a">
       “A reader lives a thousand lives before he dies!!”<br />
       -- George R.R. Martin
     </p>
 
+    <!-- HERO IMAGE -->
     <div class="hero-image">
       <img class="image" src="categories.png" />
       <img class="img" src="categories.png" />
     </div>
 
+    <!-- BOOK CATEGORY GRID -->
     <div class="card">
       <div class="image-2">
         <img class="image-4" src="comedy.png" />
-      </div>
+        </div>
     </div>
 
     <div class="frame">
@@ -99,8 +124,8 @@
         <div class="img-wrapper">
           <img class="image-5" src="thriller.png" />
         </div>
-      </div>
-      </div>
+        </div>
+    </div>
 
     <div class="text-wrapper-4 category-label">THRILLER</div>
     <div class="text-wrapper-5 category-label">COMEDY</div>
@@ -119,13 +144,14 @@
     <div class="text-wrapper-6 category-label">HORROR</div>
     <div class="text-wrapper-7 category-label">SCI-FI</div>
 
+    <!-- ROMANTIC LINK (ME BEFORE YOU) -->
     <div class="frame-wrapper">
       <div class="frame-2">
         <div class="card-wrapper">
           <div class="card-2">
             <div class="image-10">
-                            <a href="../recommendation1/recommendation1.html">
-                <img class="image-11" src="romantic.png" />
+                <a href="../categories1/categories1.html">
+                    <img class="image-11" src="romantic.png" />
               </a>
             </div>
           </div>
@@ -133,15 +159,18 @@
       </div>
     </div>
 
+    <!-- SELF-HELP LINK (IKIGAI) -->
     <div class="image-13">
-            <a href="../recommendation2/recommendation2.html">
-        <img class="image-14" src="selfhelp.png" />
+        <a href="../categories2/categories2.html">
+            <img class="image-14" src="selfhelp.png" />
       </a>
     </div>
 
-        <a href="../categories1/categories1.html">ROMANTIC</a>
-        <a href="..l/categories2/categories2.html">SELF-HELP</a>
+    <!-- CATEGORY TEXT LABELS WITH LINKS -->
+    <a href="../categories1/categories1.html" class="text-wrapper-9 category-label">ROMANTIC</a>
+    <a href="../categories2/categories2.html" class="text-wrapper-8 category-label">SELF-HELP</a>
 
+    <!-- POPULAR PICKS COPY -->
     <div class="copy">
       <div class="text-wrapper-10">⭐</div>
       <div class="text-wrapper-11">Popular Picks This Month</div>
@@ -154,14 +183,16 @@
 
     <img class="copy-2" src="img/copy.svg" />
 
+    <!-- BACK TO HOME BUTTON -->
     <div class="buttons">
       <button class="button">
                 <a href="../home page/homepage.html" class="text-wrapper-12">Back to Home</a>
       </button>
     </div>
 
+    </div> <!-- Closing the new content-wrapper-offset div -->
+
   </div>
 
 </body>
 </html>
-/categories2/categories2.html
