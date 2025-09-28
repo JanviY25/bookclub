@@ -1,16 +1,11 @@
 .categories {
   background-color: #ffffff;
-  /* Use overflow-x: hidden to prevent horizontal scroll from fixed elements */
-  overflow-x: hidden;
-  /* Removed fixed min-width for better responsiveness */
+  overflow: hidden;
   width: 100%;
+  min-width: 1442px;
   min-height: 3929px;
   position: relative;
-  /* Add padding to the top to prevent content from hiding under the fixed header */
-  padding-top: 100px;
 }
-
-
 
 .categories .navigation-footer {
   position: absolute;
@@ -150,22 +145,22 @@
 }
 
 .categories .image {
-  position: absolute;
   top: 0;
   left: 0;
   width: 1280px;
   height: 640px;
   aspect-ratio: 3.16;
+  position: absolute;
   object-fit: cover;
 }
 
 .categories .img {
-  position: absolute;
   top: 0;
   left: 0;
   width: 1280px;
   height: 640px;
   aspect-ratio: 2.28;
+  position: absolute;
   object-fit: cover;
 }
 
@@ -184,92 +179,19 @@
 }
 
 .categories .card {
-  height: 405px;
   position: absolute;
   top: 1634px;
-  left: 107px;
-  border-radius: 8px;
-  border: 1px solid;
-  border-color: #000000;
-  box-shadow: 0px 4px 4px #00000040;
-  display: flex;
-  flex-direction: column;
-  width: 508px;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.categories .image-2 {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  height: 405px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-image: url(./img/image-5.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.categories .image-3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 508px;
-  height: 405px;
-  aspect-ratio: 0.6;
-  object-fit: cover;
-}
-
-.categories .image-4 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 508px;
-  height: 405px;
-  aspect-ratio: 0.65;
-  object-fit: cover;
+  left: 103px;
+  width: 516px;
+  height: 413px;
 }
 
 .categories .frame {
-  align-items: flex-start;
-  gap: 32px;
   position: absolute;
   top: 1634px;
   left: 870px;
-  border-radius: 8px;
-  display: flex;
-  width: 508px;
-}
-
-.categories .image-wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 508px;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.categories .img-wrapper {
-  position: relative;
   width: 508px;
   height: 405px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-image: url(./img/image-3.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.categories .image-5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 508px;
-  height: 405px;
-  aspect-ratio: 0.66;
-  object-fit: cover;
 }
 
 .categories .text-wrapper-4 {
@@ -300,62 +222,21 @@
   white-space: nowrap;
 }
 
-.categories .image-6 {
-  position: absolute;
+.categories .image-2 {
   top: 2294px;
   left: 101px;
   width: 508px;
   height: 405px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-image: url(./img/image-7.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.categories .image-7 {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 475px;
-  height: 405px;
-  aspect-ratio: 0.65;
   object-fit: cover;
 }
 
-.categories .image-8 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 508px;
-  height: 405px;
-  aspect-ratio: 0.67;
-  object-fit: cover;
-}
-
-.categories .div-wrapper {
-  height: 405px;
+.categories .card-2 {
   position: absolute;
   top: 2294px;
   left: 870px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
   width: 508px;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.categories .image-9 {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
   height: 405px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-image: url(./img/image.png);
-  background-size: cover;
-  background-position: 50% 50%;
 }
 
 .categories .text-wrapper-6 {
@@ -386,94 +267,20 @@
   white-space: nowrap;
 }
 
-.categories .frame-wrapper {
+.categories .frame-2 {
   position: absolute;
   top: 983px;
-  left: 102px;
-  height: 405px;
-  border: 5px solid;
-  border-color: #000000;
-  display: flex;
-  width: 508px;
+  left: 101px;
+  width: 510px;
+  height: 410px;
 }
 
-.categories .frame-2 {
-  display: flex;
-  width: 508px;
-}
-
-.categories .card-wrapper {
-  height: 405px;
-  position: relative;
-  align-items: flex-start;
-  gap: 32px;
-  border-radius: 8px;
-  border: 1px solid;
-  border-color: #000000;
-  box-shadow: 0px 4px 0px 1px #00000040;
-  display: flex;
-  width: 508px;
-}
-
-.categories .card-2 {
-  position: relative;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  width: 508px;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.categories .image-10 {
-  position: relative;
-  width: 508px;
-  height: 405px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-image: url(./img/image-2.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.categories .image-11 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 508px;
-  height: 405px;
-  aspect-ratio: 0.77;
-  object-fit: cover;
-}
-
-.categories .image-12 {
-  position: absolute;
-  top: 0;
-  left: 5px;
-  width: 498px;
-  height: 405px;
-  aspect-ratio: 0.63;
-  object-fit: cover;
-}
-
-.categories .image-13 {
-  position: absolute;
+.categories .image-3 {
   top: 983px;
   left: 870px;
   width: 508px;
   height: 405px;
-  display: flex;
-  border-radius: 8px;
-  overflow: hidden;
-  background-image: url(./img/image-8.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.categories .image-14 {
-  width: 508px;
-  height: 405px;
-  aspect-ratio: 0.65;
+  position: absolute;
   object-fit: cover;
 }
 
@@ -607,31 +414,22 @@
 .categories .navigation {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%; /* Full width */
-  height: 100px; /* A more standard header height */
+  left: 4px;
+  height: 164px;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* CRUCIAL: Vertically centers all children */
+  width: calc(100% - 2px);
   background-color: #ffffff;
-  /* Add consistent padding on the sides */
-  padding: 0 80px;
-  box-sizing: border-box; /* Ensures padding is inside the 100% width */
-  z-index: 100; /* Ensures the header stays on top of content */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Optional: Adds a subtle shadow */
 }
 
 .categories .text-wrapper-13 {
-  /* Remove fixed margin-top and margin-left, as the parent handles alignment and padding */
-  margin-top: 0;
-  /* REMOVED: margin-left: 66px; */
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  height: auto;
-  /* INCREASED WIDTH to ensure it doesn't overlap the next element */
-  width: 380px; 
-  /* Kept original font styles, but removed fixed height/width */
+  justify-content: center;
+  margin-top: 67px;
+  width: 338px;
+  height: 30px;
+  margin-left: 66px;
   font-family: var(--body-text-font-family);
   font-weight: var(--body-text-font-weight);
   color: #000000;
@@ -642,21 +440,17 @@
   font-style: var(--body-text-font-style);
 }
 
-
-
 .categories .items-wrapper {
-  /* Remove fixed margin-top and margin-right */
-  margin-top: 0;
-  margin-right: 0;
-  display: flex;
-  width: fit-content;
-  height: auto;
+  display: inline-flex;
+  margin-top: 56px;
+  width: 590px;
+  height: 52px;
   position: relative;
+  margin-right: 80px;
   align-items: center;
   justify-content: flex-end;
   gap: var(--variable-collection-spacing-m);
 }
-
 
 .categories .items-4 {
   display: inline-flex;
@@ -683,7 +477,7 @@
   font-style: var(--body-text-font-style);
 }
 
-.categories .button-2 {
+.categories .div-wrapper {
   all: unset;
   box-sizing: border-box;
   justify-content: center;
@@ -713,58 +507,4 @@
   line-height: var(--small-text-line-height);
   white-space: nowrap;
   font-style: var(--small-text-font-style);
-}
-
-.category-label {
-  font-size: 40px !important;
-  font-weight: 600;
-  text-align: center;
-  line-height: 1.3;
-  letter-spacing: 1px;
-  color: #000;
-}
-
-.bottom-section {
-  position: absolute;
-  top: 3800px; /* increase if still hidden */
-  left: 0;
-  width: 100%;
-  background: #f9f9f9;
-  padding: 80px 100px;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 60px;
-  box-sizing: border-box;
-}
-
-.bottom-section .info-card {
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 40px;
-  width: 45%;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.bottom-section .info-card:hover {
-  transform: translateY(-8px);
-}
-
-.bottom-section .info-card .icon {
-  font-size: 50px;
-  margin-bottom: 20px;
-}
-
-.bottom-section .info-card h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.bottom-section .info-card p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #555;
 }

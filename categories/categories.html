@@ -1,236 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="globals.css" />
-  <link rel="stylesheet" href="styleguide.css" />
-  <link rel="stylesheet" href="style.css" />
-    
-    <!-- CRITICAL FIX: Aggressively enforce fixed header and content offset -->
-    <style>
-        
-        /* 1. Force the Navigation to be fixed, full width, and on top, and allow space distribution */
-        .categories .main-page-navigation {
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            height: 80px !important;
-            display: flex !important;
-            align-items: center !important;
-            /* Use space-between to push the title and the links away from each other */
-            justify-content: space-between !important;
-            width: 100% !important;
-            background-color: #ffffff !important;
-            z-index: 999999 !important; 
-            padding: 0 40px !important; 
-            box-sizing: border-box !important;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-            /* Reset gap from previous attempt, let flexbox handle spacing */
-            gap: 20px; 
-        }
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="categories">
+      <div class="navigation-footer">
+        <div class="items">
+          <div class="text-wrapper">About Us</div>
+          <div class="div">All Genres</div>
+          <div class="div">Latest Reviews</div>
+          <div class="div">PageTop Picks</div>
+        </div>
+        <div class="items-2">
+          <div class="text-wrapper">Community</div>
+          <div class="div">Join Newsletter</div>
+          <div class="div">Suggest a Book</div>
+          <div class="div">Submit a Review</div>
+        </div>
+        <div class="items-3">
+          <div class="text-wrapper">Connect</div>
+          <div class="div">Instagram</div>
+          <div class="div">Goodreads</div>
+          <div class="div">Twitter/X</div>
+        </div>
+        <div class="text-wrapper-2">Beyond The Pages</div>
+        <img class="social-icons" src="footer.png" />
+        <img class="divider" src="divider.png" />
+      </div>
+      <p class="a-reader-lives-a">“A reader lives a thousand lives before he dies!!”<br />-- George R.R. Martin</p>
+      <div class="hero-image">
+        <img class="image" src="categories.png" />
+        <img class="img" src="img/image-37.png" />
+        <div class="text-wrapper-3"></div>
+      </div>
+      <img class="card" src="comedy.png" />
+      <img class="frame" src="thriller.png" />
+      <div class="text-wrapper-4">THRILLER</div>
+      <div class="text-wrapper-5">COMEDY</div>
+      <img class="image-2" src="scifi.png" />
+      <img class="card-2" src="horror.png" />
+      <div class="text-wrapper-6">HORROR</div>
+      <div class="text-wrapper-7">SCI-FI</div>
+      <a href="../categories1/categiries1.html">
+    <img class="frame-2" src="romantic.png" />
+</a>
 
-        /* 2. Create the wrapper for all content below the header */
-        .content-wrapper-offset {
-            margin-top: 80px !important; 
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        /* FIX: Control the title element's behavior */
-        .categories .main-page-navigation .text-wrapper-13 {
-            /* This is the key: tell the title to grow, but also restrict its max size */
-            flex-grow: 0 !important; 
-            /* Set a minimum width to prevent the title from wrapping too early */
-            min-width: 200px;
-            /* Set max width to ensure it leaves space for the navigation */
-            max-width: 40% !important; 
-            overflow: hidden !important;
-            text-overflow: ellipsis !important;
-            white-space: nowrap !important;
-            /* Add some margin on the right to separate it from the nav links */
-            margin-right: 30px !important; 
-        }
-
-        /* Nav links wrapper: make it flexible to fill the center space */
-        .categories .items-wrapper {
-            /* Allow this container to consume all available space between the title and the button */
-            flex-grow: 1 !important; 
-            display: flex !important;
-            /* Push the items-4 (Genres, Reviews) to the center/right */
-            justify-content: flex-end; 
-            align-items: center !important;
-            white-space: nowrap !important;
-            gap: 20px !important;
-            flex-shrink: 0 !important; 
-        }
+<!-- Self-Help Image Link -->
+<a href="../categories2/categories2.html">
+    <img class="image-3" src="selfhelp.png" />
+</a>
+<div class="text-wrapper-8">ROMANTIC</div>
+<div class="text-wrapper-9">SELF-HELP</div>
+      
+      <div class="copy">
+        <div class="text-wrapper-10">⭐</div>
+        <div class="text-wrapper-11">Popular Picks This Month</div>
+        <p class="p">
+          See what readers can’t stop talking about — whether it’s a gripping thriller, a heart-warming romance, or an
+          inspiring non-fiction bestseller, our community’s favorites are here to help you find your next unforgettable
+          read.
+        </p>
+      </div>
+      <img class="copy-2" src="img/copy.svg" />
+      <div class="buttons">
+        <a href="../home page/homepage.html" >
+          <button class="button"><div class="text-wrapper-12">Back to Home</div></button>
+        </a>
+       
+      <div class="navigation">
+        <a href="../home page/homepage.html">
+        <p class="text-wrapper-13">Beyond The Pages - The Book Club</p>
+        </a>
         
-        /* Inner Links container: keep links grouped tightly */
-        .categories .items-4 {
-            display: flex !important;
-            align-items: center !important;
-            white-space: nowrap !important;
-            gap: 20px !important;
-            flex-shrink: 0 !important; 
-            /* Push the Genre link group slightly right within the wrapper */
-            margin-left: auto;
-        }
-
-
-        /* Ensuring body doesn't cause issues */
-        body {
-            padding-top: 0 !important;
-            margin: 0 !important;
-        }
-        
-    </style>
-</head>
-<body>
-
-  <div class="categories">
-    
-    <!-- FIXED HEADER SECTION - Added new class "main-page-navigation" -->
-    <div class="navigation main-page-navigation">
-        <a href="../home page/homepage.html" class="text-wrapper-13">Beyond The Pages - The Book Club</a>
-        
-        <div class="items-wrapper">
-            <div class="items-4">
-                <!-- This link points to the current page -->
-                <a href="categories.html" class="text-wrapper-14">Genres</a> 
-                <a href="../reviews/reviews.html" class="text-wrapper-14">Reviews</a>
-                <a href="../recommendation1/recommendation1.html" class="text-wrapper-14">Recommendations</a>
-            </div>
-            <button class="button-2">
-                <a href="../aboutus/aboutus.html" class="text-wrapper-15">About Us</a>
-            </button>
-        </div>
-    </div>
-
-    <!-- CRITICAL WRAPPER: Pushes content below the 80px fixed header -->
-    <div class="content-wrapper-offset">
-    
-    
-    <!-- FOOTER -->
-    <div class="navigation-footer">
-      <div class="items">
-                <a href="../aboutus/aboutus.html" class="text-wrapper">About Us</a>
-        <a href="categories.html" class="div">All Genres</a> 
-        <div class="div">Latest Reviews</div>
-        <div class="div">PageTop Picks</div>
-      </div>
-
-      <div class="items-2">
-        <div class="text-wrapper">Community</div>
-        <div class="div">Join Newsletter</div>
-        <div class="div">Suggest a Book</div>
-        <div class="div">Submit a Review</div>
-        </div>
-
-      <div class="items-3">
-        <div class="text-wrapper">Connect</div>
-        <div class="div">Instagram</div>
-        <div class="div">Goodreads</div>
-        <div class="div">Twitter/X</div>
-      </div>
-
-      <div class="text-wrapper-2">Beyond The Pages</div>
-      <img class="social-icons" src="footer.png" />
-      <img class="divider" src="divider.png" />
-    </div>
-
-    <!-- MAIN QUOTE -->
-    <p class="a-reader-lives-a">
-      “A reader lives a thousand lives before he dies!!”<br />
-      -- George R.R. Martin
-    </p>
-
-    <!-- HERO IMAGE -->
-    <div class="hero-image">
-      <img class="image" src="categories.png" />
-      <img class="img" src="categories.png" />
-    </div>
-
-    <!-- BOOK CATEGORY GRID -->
-    <div class="card">
-      <div class="image-2">
-        <img class="image-4" src="comedy.png" />
-        </div>
-      </div>
-
-    <div class="frame">
-      <div class="image-wrapper">
-        <div class="img-wrapper">
-          <img class="image-5" src="thriller.png" />
-          </div>
-        </div>
-      </div>
-
-    <div class="text-wrapper-4 category-label">THRILLER</div>
-    <div class="text-wrapper-5 category-label">COMEDY</div>
-
-    <div class="image-6">
-      <img class="image-7" src="img/image-6.png" />
-      <img class="image-8" src="scifi.png" />
-    </div>
-
-    <div class="div-wrapper">
-      <div class="image-9">
-        <img class="image-8" src="horror.png" />
-      </div>
-      </div>
-
-    <div class="text-wrapper-6 category-label">HORROR</div>
-    <div class="text-wrapper-7 category-label">SCI-FI</div>
-
-    <!-- ROMANTIC LINK (ME BEFORE YOU) -->
-    <div class="frame-wrapper">
-      <div class="frame-2">
-        <div class="card-wrapper">
-          <div class="card-2">
-            <div class="image-10">
-                <a href="/categories1/categiries1.html"> <!-- Absolute Path used here -->
-                    <img class="image-11" src="romantic.png" />
-              </a>
-            </div>
-            </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SELF-HELP LINK (IKIGAI) -->
-    <div class="image-13">
-        <a href="/categories2/categories2.html"> <!-- Absolute Path used here -->
-            <img class="image-14" src="selfhelp.png" />
-      </a>
-    </div>
-
-    <!-- CATEGORY TEXT LABELS WITH LINKS -->
-    <a href="/categories2/categories2.html" class="text-wrapper-9 category-label">SELF-HELP</a> <!-- Absolute Path used here -->
-    <a href="/categories1/categories1.html" class="text-wrapper-8 category-label">ROMANTIC</a> <!-- Absolute Path used here -->
-
-    <!-- POPULAR PICKS COPY -->
-    <div class="copy">
-      <div class="text-wrapper-10">⭐</div>
-      <div class="text-wrapper-11">Popular Picks This Month</div>
-      <p class="p">
-        See what readers can’t stop talking about — whether it’s a gripping thriller, 
-        a heart-warming romance, or an inspiring non-fiction bestseller, our community’s 
-        favorites are here to help you find your next unforgettable read.
-      </p>
-    </div>
-
-    <img class="copy-2" src="img/copy.svg" />
-
-    <!-- BACK TO HOME BUTTON -->
-    <div class="buttons">
-      <button class="button">
-                <a href="../home page/homepage.html" class="text-wrapper-12">Back to Home</a>
-      </button>
-    </div>
-
-    </div> <!-- Closing the content-wrapper-offset div -->
-
-  </div>
-
-</body>
+        <div class="items-wrapper">
+          <div class="items-4">
+                <a href="../categories/categories.html" class="text-wrapper-14">Genres</a>
+            <a href="../reviews/reviews.html" class="text-wrapper-14">Reviews</a>
+            <a href="../recommendation1/recommendation1.html" class="text-wrapper-14">Recommendations</a>
+            <button class="div-wrapper"><a href="../aboutus/aboutus.html" class="text-wrapper-15">About Us</a></button>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,218 +1,188 @@
-/* * GLOBAL STYLES & VARIABLE DEFINITIONS 
- */
-:root {
-  /* Font Variables (Assuming these are defined elsewhere or are the user's preferred values) */
-  --body-text-font-family: "Inter-Medium", Helvetica;
-  --body-text-font-weight: 500;
-  --body-text-font-size: 18px;
-  --body-text-letter-spacing: 0;
-  --body-text-line-height: 27px;
-  --body-text-font-style: normal;
-
-  --small-text-font-family: "Inter-Regular", Helvetica;
-  --small-text-font-weight: 400;
-  --small-text-font-size: 16px;
-  --small-text-letter-spacing: 0;
-  --small-text-line-height: 24px;
-  --small-text-font-style: normal;
-
-  --subheading-font-family: "Inter-Bold", Helvetica;
-  --subheading-font-weight: 700;
-  --subheading-font-size: 32px;
-  --subheading-letter-spacing: 0;
-  --subheading-line-height: 48px;
-  --subheading-font-style: normal;
-
-  /* Spacing Variables */
-  --variable-collection-spacing-m: 40px;
-  --variable-collection-spacing-s: 16px;
-
-  /* Shadow Variables */
-  --button-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* ---------------------------------------------------- */
-/* --- Global Container Fixes --- */
-/* ---------------------------------------------------- */
-
 .categories {
   background-color: #ffffff;
-  /* Ensure container is full width and flows content normally */
+  overflow: hidden;
   width: 100%;
+  min-width: 1442px;
+  min-height: 4025px;
   position: relative;
-  /* Add top padding to prevent content from hiding behind the fixed header (80px tall) */
-  padding-top: 80px; 
-  box-sizing: border-box;
-  overflow-x: hidden; 
-  min-height: 100vh; 
 }
-
-/* ---------------------------------------------------- */
-/* --- Navigation/Header Fixes (Using Flexbox) --- */
-/* ---------------------------------------------------- */
-
-.categories .navigation {
-  position: fixed;
-  width: 100%; 
-  top: 0;
-  left: 0; 
-  height: 80px; 
-  display: flex;
-  align-items: center; /* Vertically centers all items */
-  justify-content: space-between; /* Pushes title to left, links/button to right */
-  background-color: #ffffff;
-  z-index: 100; /* Ensures header is always on top */
-  padding: 0 80px; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.categories .p {
-  /* Site Title: "Beyond The Pages - The Book Club" */
-  margin: 0; 
-  width: auto; 
-  height: auto;
-  text-decoration: none;
-  color: #000000;
-  white-space: nowrap;
-  font-family: var(--body-text-font-family);
-  font-weight: var(--body-text-font-weight);
-  font-size: var(--body-text-font-size);
-  letter-spacing: var(--body-text-letter-spacing);
-  line-height: var(--body-text-line-height);
-  font-style: var(--body-text-font-style);
-  /* FIX: Ensure the title does not grow excessively */
-  min-width: 0; 
-}
-
-.categories .items-wrapper {
-  /* Menu wrapper for links and button */
-  display: flex;
-  align-items: center;
-  margin: 0; 
-  width: auto;
-  height: auto;
-  gap: var(--variable-collection-spacing-m); 
-  /* FIX: Allow this container to shrink if needed */
-  min-width: 0; 
-}
-
-.categories .items-4 {
-  /* The group of individual navigation links */
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: var(--variable-collection-spacing-m); /* Space between links */
-  position: relative;
-  flex: 0 0 auto;
-  /* FIX: Prevent wrapping of links and force horizontal layout */
-  white-space: nowrap; 
-}
-
-.categories .text-wrapper-5 {
-  /* Navigation links (Genres, Reviews, etc.) */
-  text-decoration: none; 
-  color: #000000;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  font-family: var(--body-text-font-family);
-  font-weight: var(--body-text-font-weight);
-  font-size: var(--body-text-font-size);
-  letter-spacing: var(--body-text-letter-spacing);
-  line-height: var(--body-text-line-height);
-  white-space: nowrap;
-  font-style: var(--body-text-font-style);
-  /* FIX: Set a max size and ensure no extra margins */
-  max-width: 150px; 
-  box-sizing: border-box;
-}
-
-.categories .div-wrapper {
-  /* About Us button wrapper */
-  all: unset;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 14px 24px;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #000000;
-  border-radius: 8px;
-  box-shadow: var(--button-shadow);
-  cursor: pointer;
-}
-
-.categories .text-wrapper-6 {
-  /* Text inside the About Us button */
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: var(--small-text-font-family);
-  font-weight: var(--small-text-font-weight);
-  color: #ffffff;
-  font-size: var(--small-text-font-size);
-  letter-spacing: var(--small-text-letter-spacing);
-  line-height: var(--small-text-line-height);
-  white-space: nowrap;
-  font-style: var(--small-text-font-style);
-}
-
-/* ---------------------------------------------------- */
-/* --- Main Content Positioning Fixes --- */
-/* ---------------------------------------------------- */
 
 .categories .hero-image {
-  /* Changed from absolute to flow-based positioning */
-  position: relative; 
-  width: calc(100% - 160px); 
-  margin: 40px auto; /* Center horizontally and add vertical spacing */
-  height: 400px; 
+  position: absolute;
+  width: 88.77%;
+  top: calc(50.00% - 1848px);
+  left: 5.83%;
+  height: 640px;
   border-radius: 8px;
   overflow: hidden;
+  background-image: url(./img/hero-image.png);
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .categories .image {
-  /* Make image fill its parent container */
+  aspect-ratio: 3.16;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 1280px;
+  height: 640px;
   object-fit: cover;
 }
 
-/* Group (Book Covers Grid) */
-.categories .group {
-  position: relative; 
-  width: calc(100% - 160px); 
-  height: auto; 
-  margin: 40px auto 80px auto; 
-  display: block;
+.categories .img {
+  aspect-ratio: 2.28;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 640px;
+  object-fit: cover;
 }
 
-/* --- Button Styles (Apply to Back, Read More, etc.) --- */
+.categories .text-wrapper {
+  position: absolute;
+  top: 117px;
+  left: 196px;
+  width: 888px;
+  font-family: "Just Me Again Down Here-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 250px;
+  letter-spacing: 0;
+  line-height: 375px;
+  white-space: nowrap;
+}
 
-.categories .buttons,
-.categories .button-wrapper,
-.categories .buttons-2,
-.categories .buttons-3 {
-  /* General container for buttons, adjusted to flow naturally */
+.categories .navigation-footer {
+  position: absolute;
+  width: calc(100% - 2px);
+  top: 3761px;
+  left: 4px;
+  height: 264px;
+  background-color: #ffffff;
+}
+
+.categories .items {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  align-items: flex-end;
+  justify-content: center;
+  gap: var(--variable-collection-spacing-s);
+  position: absolute;
+  top: 48px;
+  right: 517px;
+}
+
+.categories .div {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: var(--small-text-font-family);
+  font-weight: var(--small-text-font-weight);
+  color: #000000;
+  font-size: var(--small-text-font-size);
+  letter-spacing: var(--small-text-letter-spacing);
+  line-height: var(--small-text-line-height);
+  font-style: var(--small-text-font-style);
+}
+
+.categories .text-wrapper-2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  font-family: var(--small-text-font-family);
+  font-weight: var(--small-text-font-weight);
+  color: #444444;
+  font-size: var(--small-text-font-size);
+  letter-spacing: var(--small-text-letter-spacing);
+  line-height: var(--small-text-line-height);
+  font-style: var(--small-text-font-style);
+}
+
+.categories .items-2 {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  align-items: flex-end;
+  justify-content: center;
+  gap: var(--variable-collection-spacing-s);
+  position: absolute;
+  top: 48px;
+  right: 298px;
+}
+
+.categories .items-3 {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  align-items: flex-end;
+  justify-content: center;
+  gap: var(--variable-collection-spacing-s);
+  position: absolute;
+  top: 48px;
+  right: 80px;
+}
+
+.categories .text-wrapper-3 {
+  position: absolute;
+  top: 52px;
+  left: 80px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--subheading-font-family);
+  font-weight: var(--subheading-font-weight);
+  color: #000000;
+  font-size: var(--subheading-font-size);
+  letter-spacing: var(--subheading-letter-spacing);
+  line-height: var(--subheading-line-height);
+  white-space: nowrap;
+  font-style: var(--subheading-font-style);
+}
+
+.categories .social-icons {
+  position: absolute;
+  top: 176px;
+  left: 80px;
+  width: 184px;
+  height: 40px;
+}
+
+.categories .divider {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  width: 1280px;
+  height: 1px;
+  object-fit: cover;
+}
+
+.categories .group {
+  position: absolute;
+  top: 838px;
+  left: 80px;
+  width: 1276px;
+  height: 2793px;
+}
+
+.categories .buttons {
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  margin: 20px 80px 40px 80px; 
+  position: absolute;
+  top: 3658px;
+  left: 84px;
 }
 
 .categories .button {
-  /* Primary button style */
   all: unset;
   box-sizing: border-box;
   display: inline-flex;
@@ -224,11 +194,9 @@
   background-color: #000000;
   border-radius: 8px;
   box-shadow: var(--button-shadow);
-  cursor: pointer;
 }
 
 .categories .text-wrapper-4 {
-  /* Text inside the primary button */
   position: relative;
   display: flex;
   align-items: center;
@@ -244,106 +212,109 @@
   white-space: nowrap;
 }
 
-/* ---------------------------------------------------- */
-/* --- Footer Section Fixes (Using Flexbox) --- */
-/* ---------------------------------------------------- */
+.categories .button-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  position: absolute;
+  top: 3658px;
+  left: 1132px;
+}
 
-.categories .navigation-footer {
-  position: relative; 
-  width: 100%;
-  height: auto; 
-  background-color: #ffffff;
+.categories .navigation {
+  position: fixed;
+  width: calc(100% - 2px);
+  top: 0;
+  left: 4px;
+  height: 164px;
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: flex-start; 
-  padding: 40px 80px; 
-  box-sizing: border-box;
-  gap: 40px;
-  margin-top: 60px; /* Space above footer */
-  border-top: 1px solid #e0e0e0; /* Add a subtle separator */
+  justify-content: space-between;
+  background-color: #ffffff;
 }
 
-.categories .divider {
-  /* This style is for the original image divider, but border-top is preferred */
-  display: none; 
-}
-
-.categories .text-wrapper-3 {
-  /* "Beyond The Pages" in footer */
-  position: relative; 
-  top: auto;
-  left: auto;
-  height: auto;
+.categories .p {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  min-width: 250px;
-  font-family: var(--subheading-font-family);
-  font-weight: var(--subheading-font-weight);
+  justify-content: center;
+  margin-top: 67px;
+  width: 338px;
+  height: 30px;
+  margin-left: 66px;
+  font-family: var(--body-text-font-family);
+  font-weight: var(--body-text-font-weight);
   color: #000000;
-  font-size: var(--subheading-font-size);
-  letter-spacing: var(--subheading-letter-spacing);
-  line-height: var(--subheading-line-height);
-  font-style: var(--subheading-font-style);
-  order: -1; 
-  margin-bottom: 20px;
+  font-size: var(--body-text-font-size);
+  letter-spacing: var(--body-text-letter-spacing);
+  line-height: var(--body-text-line-height);
+  white-space: nowrap;
+  font-style: var(--body-text-font-style);
 }
 
-.categories .items,
-.categories .items-2,
-.categories .items-3 {
-  /* Footer columns */
-  display: flex;
-  flex-direction: column;
-  width: 187px;
-  align-items: flex-start; 
-  justify-content: flex-start;
-  gap: var(--variable-collection-spacing-s);
-  position: relative; 
-  top: auto;
-  right: auto;
-  margin-right: 40px; 
+.categories .items-wrapper {
+  display: inline-flex;
+  margin-top: 56px;
+  width: 590px;
+  height: 52px;
+  position: relative;
+  margin-right: 80px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--variable-collection-spacing-m);
 }
 
-.categories .div {
-  /* Footer main text wrappers (e.g., column headers) */
+.categories .items-4 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--variable-collection-spacing-m);
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.categories .text-wrapper-5 {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  align-self: stretch;
+  justify-content: center;
+  width: fit-content;
+  font-family: var(--body-text-font-family);
+  font-weight: var(--body-text-font-weight);
+  color: #000000;
+  font-size: var(--body-text-font-size);
+  letter-spacing: var(--body-text-letter-spacing);
+  line-height: var(--body-text-line-height);
+  white-space: nowrap;
+  font-style: var(--body-text-font-style);
+}
+
+.categories .div-wrapper {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #000000;
+  border-radius: 8px;
+  box-shadow: var(--button-shadow);
+}
+
+.categories .text-wrapper-6 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
   margin-top: -1.00px;
   font-family: var(--small-text-font-family);
   font-weight: var(--small-text-font-weight);
-  color: #000000;
+  color: #ffffff;
   font-size: var(--small-text-font-size);
   letter-spacing: var(--small-text-letter-spacing);
   line-height: var(--small-text-line-height);
+  white-space: nowrap;
   font-style: var(--small-text-font-style);
-}
-
-.categories .text-wrapper-2 {
-  /* Footer sub-text wrappers (e.g., links) */
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  align-self: stretch;
-  font-family: var(--small-text-font-family);
-  font-weight: var(--small-text-font-weight);
-  color: #444444;
-  font-size: var(--small-text-font-size);
-  letter-spacing: var(--small-text-letter-spacing);
-  line-height: var(--small-text-line-height);
-  font-style: var(--small-text-font-style);
-  text-decoration: none; /* Ensure links look like links */
-}
-
-.categories .social-icons {
-  position: relative; 
-  top: auto;
-  left: auto;
-  width: 184px;
-  height: 40px;
-  margin-top: 10px;
 }
