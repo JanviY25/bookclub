@@ -1,11 +1,16 @@
 .categories {
   background-color: #ffffff;
-  overflow: hidden;
+  /* Use overflow-x: hidden to prevent horizontal scroll from fixed elements */
+  overflow-x: hidden;
+  /* Removed fixed min-width for better responsiveness */
   width: 100%;
-  min-width: 1442px;
   min-height: 3929px;
   position: relative;
+  /* Add padding to the top to prevent content from hiding under the fixed header */
+  padding-top: 100px;
 }
+
+
 
 .categories .navigation-footer {
   position: absolute;
@@ -602,22 +607,31 @@
 .categories .navigation {
   position: fixed;
   top: 0;
-  left: 4px;
-  height: 164px;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100px; /* A more standard header height */
   display: flex;
   justify-content: space-between;
-  width: calc(100% - 2px);
+  align-items: center; /* CRUCIAL: Vertically centers all children */
   background-color: #ffffff;
+  /* Add consistent padding on the sides */
+  padding: 0 80px;
+  box-sizing: border-box; /* Ensures padding is inside the 100% width */
+  z-index: 100; /* Ensures the header stays on top of content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Optional: Adds a subtle shadow */
 }
 
 .categories .text-wrapper-13 {
+  /* Remove fixed margin-top and margin-left, as the parent handles alignment and padding */
+  margin-top: 0;
+  /* REMOVED: margin-left: 66px; */
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 67px;
-  width: 338px;
-  height: 30px;
-  margin-left: 66px;
+  justify-content: flex-start;
+  height: auto;
+  /* INCREASED WIDTH to ensure it doesn't overlap the next element */
+  width: 380px; 
+  /* Kept original font styles, but removed fixed height/width */
   font-family: var(--body-text-font-family);
   font-weight: var(--body-text-font-weight);
   color: #000000;
@@ -628,17 +642,21 @@
   font-style: var(--body-text-font-style);
 }
 
+
+
 .categories .items-wrapper {
-  display: inline-flex;
-  margin-top: 56px;
-  width: 590px;
-  height: 52px;
+  /* Remove fixed margin-top and margin-right */
+  margin-top: 0;
+  margin-right: 0;
+  display: flex;
+  width: fit-content;
+  height: auto;
   position: relative;
-  margin-right: 80px;
   align-items: center;
   justify-content: flex-end;
   gap: var(--variable-collection-spacing-m);
 }
+
 
 .categories .items-4 {
   display: inline-flex;
