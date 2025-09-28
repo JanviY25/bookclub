@@ -59,8 +59,6 @@
 .recommendations .div {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 515px;
   height: 36px;
   font-family: var(--subheading-font-family);
@@ -343,12 +341,10 @@
 .recommendations .text-wrapper-7 {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   align-self: stretch;
   font-family: var(--body-text-font-family);
   font-weight: var(--body-text-font-weight);
-  color: #000000;
+  color: #5c5b5b;
   font-size: var(--body-text-font-size);
   letter-spacing: var(--body-text-letter-spacing);
   line-height: var(--body-text-line-height);
