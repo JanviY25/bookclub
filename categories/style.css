@@ -123,10 +123,10 @@
   top: 2885px;
   left: 80px;
   width: 1590px;
-  font-family: "Island Moments-Regular", Helvetica;
+  font-family: 'Tangerine', cursive;
   font-weight: 400;
   color: #000000;
-  font-size: 64px;
+  font-size: 80px;
   letter-spacing: 0;
   line-height: 96px;
 }
@@ -199,7 +199,7 @@
   top: 2054px;
   left: 935px;
   width: 381px;
-  font-family: "Jim Nightshade-Regular", Helvetica;
+  font-family: 'Creepster', cursive;
   font-weight: 400;
   color: #000000;
   font-size: 100px;
@@ -213,7 +213,7 @@
   top: 2075px;
   left: 148px;
   width: 399px;
-  font-family: "Marhey-Regular", Helvetica;
+  font-family: 'Barriecito', cursive;
   font-weight: 400;
   color: #000000;
   font-size: 80px;
@@ -244,7 +244,7 @@
   top: 2705px;
   left: 934px;
   width: 378px;
-  font-family: "Kolker Brush-Regular", Helvetica;
+  font-family: 'Rubik Glitch', system-ui;
   font-weight: 400;
   color: #000000;
   font-size: 100px;
@@ -257,11 +257,12 @@
   position: absolute;
   top: 2713px;
   left: 170px;
-  width: 370px;
-  font-family: "Kode Mono-Regular", Helvetica;
-  font-weight: 400;
+  width: 1000px;
+  align-items: center;
+  font-family: 'Michroma', sans-serif;
+  font-weight: 1000;
   color: #000000;
-  font-size: 100px;
+  font-size: 50px;
   letter-spacing: 0;
   line-height: 150px;
   white-space: nowrap;
@@ -289,7 +290,7 @@
   top: 1392px;
   left: 180px;
   width: 352px;
-  font-family: "Just Me Again Down Here-Regular", Helvetica;
+  font-family: 'Italianno', cursive;
   font-weight: 400;
   color: #000000;
   font-size: 100px;
@@ -303,7 +304,7 @@
   top: 1386px;
   left: 924px;
   width: 402px;
-  font-family: "Jockey One-Regular", Helvetica;
+  font-family: 'Londrina Shadow', cursive;
   font-weight: 400;
   color: #000000;
   font-size: 100px;
@@ -313,6 +314,17 @@
 }
 
 .categories .copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--variable-collection-spacing-XS);
+  left: 100px;
+  width: 548px;
+  position: absolute;
+  top: 3131px;
+}
+
+.categories .copy-2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;

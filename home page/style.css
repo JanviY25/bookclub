@@ -618,8 +618,6 @@
 .home-page .text-wrapper-14 {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 515px;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
@@ -728,8 +726,6 @@
 .home-page .beyond-every-page {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   align-self: stretch;
   font-family: var(--subheading-font-family);
   font-weight: var(--subheading-font-weight);
