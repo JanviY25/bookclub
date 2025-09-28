@@ -881,3 +881,51 @@
   white-space: nowrap;
   font-style: var(--small-text-font-style);
 }
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+  padding-top: 28%;;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.carousel-slide {
+  position: relative;
+  min-width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: fit-content;
+  display: block;
+  object-fit: cover;
+  padding: auto;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 4px;
+  max-width: 80%;
+}
+
+@keyframes scroll {
+  0% {transform: translateX(0);}
+  20% {transform: translateX(0);}
+  25% {transform: translateX(-100%);}
+  45% {transform: translateX(-100%);}
+  50% {transform: translateX(-200%);}
+  70% {transform: translateX(-200%);}
+  75% {transform: translateX(-300%);}
+  95% {transform: translateX(-300%);}
+  100% {transform: translateX(-400%);}
+}
