@@ -67,12 +67,6 @@
   flex: 0 0 auto;
 }
 
-.home-page .img {
-  position: relative;
-  width: 45px;
-  height: 45px;
-  object-fit: cover;
-}
 
 .home-page .frame {
   display: inline-flex;
@@ -81,23 +75,6 @@
   gap: 2px;
   position: relative;
   flex: 0 0 auto;
-}
-
-.home-page .text-wrapper-2 {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: var(--small-text-font-family);
-  font-weight: var(--small-text-font-weight);
-  color: #000000;
-  font-size: var(--small-text-font-size);
-  letter-spacing: var(--small-text-letter-spacing);
-  line-height: var(--small-text-line-height);
-  white-space: nowrap;
-  font-style: var(--small-text-font-style);
 }
 
 .home-page .customer-quote-2 {
@@ -273,20 +250,6 @@
   line-height: var(--subheading-line-height);
   white-space: nowrap;
   font-style: var(--subheading-font-style);
-}
-
-.home-page .hero-image {
-  position: absolute;
-  width: 88.89%;
-  top: calc(50.00% - 1972px);
-  left: 5.56%;
-  height: 640px;
-  display: flex;
-  border-radius: 8px;
-  overflow: hidden;
-  background-image: url(./img/hero-image.png);
-  background-size: cover;
-  background-position: 50% 50%;
 }
 
 .home-page .image {
@@ -891,7 +854,7 @@
 
 .carousel-track {
   display: flex;
-  animation: scroll 30s linear infinite;
+  animation: scroll 25s linear infinite;
 }
 
 .carousel-slide {
@@ -907,16 +870,6 @@
   padding: auto;
 }
 
-.carousel-caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 4px;
-  max-width: 80%;
-}
 
 @keyframes scroll {
   0% {transform: translateX(0);}
