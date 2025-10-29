@@ -300,7 +300,7 @@
   height: 405px;
   border-radius: 8px;
   overflow: hidden;
-  background-image: url(./home page/Image.png);
+  background-image: url("./home page/Image.png");
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -497,7 +497,6 @@
 }
 
 .home-page .card-3 {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -520,7 +519,7 @@
 }
 
 .home-page .copy-3 {
-  width: 625px;
+  width: 624px;
   gap: var(--variable-collection-spacing-XS);
   position: relative;
   flex: 0 0 auto;
@@ -594,7 +593,7 @@
   position: absolute;
   top: 4311px;
   left: 0;
-  width: 1440px;
+  width: 1500px;
   height: 236px;
   background-color: #f7f7f7;
 }
