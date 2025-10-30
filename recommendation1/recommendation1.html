@@ -141,5 +141,89 @@
         </div>
       </div>
     </div>
+    <script>
+    // Define Book class
+    class Book {
+      constructor(title, author, summary, details, image) {
+        this.title = title;
+        this.author = author;
+        this.summary = summary;
+        this.details = details;
+        this.image = image;
+      }
+    }
+
+    // Create a fresh list of book objects
+    const books = [
+      new Book(
+        "The Notebook",
+        "Nicholas Sparks",
+        "A timeless love story about passion, memory, and second chances.",
+        "Book details: Paperback, 214 pages, Language: English",
+        "p1.png"
+      ),
+      new Book(
+        "The Song of Achilles",
+        "Madeline Miller",
+        "A stunning retelling of the myth of Achilles and Patroclus — a story of love, fate, and heroism.",
+        "Through lyrical prose, the novel explores friendship, destiny, and the cost of immortality.",
+        "r1.jpg"
+      ),
+      new Book(
+        "A Man Called Ove",
+        "Fredrik Backman",
+        "A heartwarming and humorous story about a grumpy yet lovable man whose life changes through unexpected friendships.",
+        "A powerful story about loss, kindness, and the small acts that bring people together.",
+        "r2.jpg"
+      ),
+      new Book(
+        "The Martian",
+        "Andy Weir",
+        "A thrilling survival story about an astronaut stranded on Mars.",
+        "Combining science, wit, and resilience — it’s a story of problem-solving and hope against impossible odds.",
+        "r3.jpg"
+      ),
+      new Book(
+        "Where the Crawdads Sing",
+        "Delia Owens",
+        "A haunting mystery and coming-of-age story set in the marshes of North Carolina.",
+        "Kya Clark, the 'Marsh Girl,' becomes the prime suspect in a murder — a tale of isolation, nature, and survival.",
+        "r4.jpg"
+      ),
+      new Book(
+        "The Seven Husbands of Evelyn Hugo",
+        "Taylor Jenkins Reid",
+        "A dazzling tale of fame, love, and secrets told through the life of an aging Hollywood star.",
+        "Journalist Monique Grant uncovers the truth about Evelyn’s glamorous yet heartbreaking past.",
+        "r5.jpg"
+      )
+    ];
+
+    // Keep track of which book to show next using localStorage
+    let index = parseInt(localStorage.getItem("bookIndex")) || 0;
+
+    // Update DOM when content is loaded
+    document.addEventListener("DOMContentLoaded", () => {
+      const titleElement = document.querySelector(".product-name");
+      const authorElement = document.querySelector(".subheading");
+      const descriptionElement = document.querySelector(".description");
+      const detailsElement = document.querySelector(".p");
+      const imageElement = document.querySelector(".image-7");
+
+      const book = books[index];
+
+      if (titleElement && authorElement && descriptionElement && detailsElement && imageElement) {
+        titleElement.textContent = book.title;
+        authorElement.textContent = `by ${book.author}`;
+        descriptionElement.textContent = book.summary;
+        detailsElement.textContent = book.details;
+        imageElement.src = book.image;
+      }
+
+      // Move to next book for next load
+      index = (index + 1) % books.length;
+      localStorage.setItem("bookIndex", index);
+    });
+    </script>
   </body>
 </html>
