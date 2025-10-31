@@ -15,7 +15,8 @@
         <div class="subheading">by Nicholas Sparks</div>
         <div class="div">⭐⭐⭐⭐⭐</div>
         <p class="description">A timeless love story about passion, memory, and second chances.</p>
-        <button class="button"><div class="text-wrapper-2">Add to Wishlist</div></button>
+        <button id="wishlist-btn" class="button"><div class="text-wrapper-2">Add to Wishlist</div></button>
+
         <p class="p">Book details: Paperback, 214 pages, Language: English</p>
       </div>
       <div class="product-name-2">Most recommended book</div>
@@ -69,6 +70,28 @@
       <div class="card-grid" id="book-grid"></div>
 
       <script src="script.js"></script>
+     <script>
+      document.addEventListener("DOMContentLoaded", () => {
+      const wishlistBtn = document.getElementById("wishlist-btn");
+      let added = false;
+
+      wishlistBtn.addEventListener("click", () => {
+      if (!added) {
+        wishlistBtn.innerHTML = '<div class="text-wrapper-2">Added to Wishlist ✓</div>';
+        wishlistBtn.style.backgroundColor = "#28a745";
+        wishlistBtn.style.color = "white";
+        added = true;
+      } else {
+        wishlistBtn.innerHTML = '<div class="text-wrapper-2">Add to Wishlist</div>';
+        wishlistBtn.style.backgroundColor = ""; // reset
+        wishlistBtn.style.color = "";
+        added = false;
+        }
+      });
+      });
+      </script>
+
+
 
       <img class="image-7" src="p1.png" />
       <div class="buttons">
@@ -83,7 +106,7 @@
         
         <div class="items-wrapper">
           <div class="items-4">
-            <a href="../categories/categories.html" class="text-wrapper-11">Genres</a>
+            <a href="../genres/genres.html" class="text-wrapper-11">Genres</a>
             <a href="../reviews/reviews.html" class="text-wrapper-11">Reviews</a>
             <a href="../recommendation1/recommendation1.html" class="text-wrapper-11">Recommendations</a>
             <button class="button-2"><a href="../aboutus/aboutus.html" class="text-wrapper-2">About Us</a></button>

@@ -17,9 +17,15 @@
         <p class="description">
           A chilling dystopian tale of surveillance, control, and the fight for freedom in a totalitarian world.
         </p>
-        <button class="button"><div class="text-wrapper-2">Add to Wishlist</div></button>
+
+        <!-- ✅ Added ID for JavaScript to target -->
+        <button id="wishlist-btn" class="button">
+          <div class="text-wrapper-2">Add to Wishlist</div>
+        </button>
+
         <p class="p">Book details: Paperback, 328 pages, Language: English</p>
       </div>
+
       <div class="navigation-footer">
         <div class="items">
           <div class="text-wrapper-3">Topic</div>
@@ -66,6 +72,7 @@
           <img class="divider" src="divider.png" />
         </div>
       </div>
+
       <div class="card-grid">
         <div class="card">
           <div class="image"><img class="img" src="p3.png" /></div>
@@ -120,31 +127,55 @@
           </div>
         </div>
       </div>
+
       <img class="image-8" src="p1.png" />
       <div class="buttons">
         <a href="../home page/homepage.html">
-          <button class="div-wrapper"><div class="text-wrapper-9">Back to Home</div></button>
-        </a>
-        
+          <button class="div-wrapper"><div class="text-wrapper-9">Back to Home</div></button>
+        </a>
       </div>
+
       <div class="button-wrapper">
         <a href="../recommendation1/recommendation1.html">
           <button class="div-wrapper"><div class="text-wrapper-9">Back to Top Recommendations</div></button>
         </a>
-        
       </div>
+
       <div class="navigation">
         <p class="text-wrapper-10">Beyond The Pages - The Book Club</p>
         <div class="items-wrapper">
           <div class="items-4">
-            <a href="../categories/categories.html" class="text-wrapper-11">Genres</a>
+            <a href="../genres/genres.html"class="text-wrapper-11">Genres</a>
             <a href="../reviews/reviews.html" class="text-wrapper-11">Reviews</a>
             <a href="../recommendation1/recommendation1.html" class="text-wrapper-11">Recommendations</a>
-            <button class="button-2"><a href="../aboutus/aboutus.html" class="text-wrapper-2">About Us</a></button>
-
+            <button class="button-2">
+              <a href="../aboutus/aboutus.html" class="text-wrapper-2">About Us</a>
+            </button>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- ✅ Wishlist Toggle Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const wishlistBtn = document.getElementById("wishlist-btn");
+        let added = false;
+
+        wishlistBtn.addEventListener("click", () => {
+          if (!added) {
+            wishlistBtn.innerHTML = '<div class="text-wrapper-2">Added to Wishlist ✓</div>';
+            wishlistBtn.style.backgroundColor = "#28a745"; // green
+            wishlistBtn.style.color = "white";
+            added = true;
+          } else {
+            wishlistBtn.innerHTML = '<div class="text-wrapper-2">Add to Wishlist</div>';
+            wishlistBtn.style.backgroundColor = "";
+            wishlistBtn.style.color = "";
+            added = false;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
