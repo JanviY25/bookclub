@@ -521,5 +521,120 @@
   font-style: var(--small-text-font-style);
 }
 
+.categories .card {
+  height: 366px;
+  top: 1107px;
+  left: 109px;
+  display: flex;
+  flex-direction: column;
+  width: 404px;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+}
 
+.categories .card-2 {
+  top: 1509px;
+  left: 109px;
+  display: flex;
+  flex-direction: column;
+  width: 404px;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+}
 
+.categories .card-3 {
+  height: 366px;
+  top: 1505px;
+  left: 548px;
+  display: flex;
+  flex-direction: column;
+  width: 404px;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+}
+
+.categories .card-4 {
+  height: 366px;
+  top: 1505px;
+  left: 987px;
+  display: flex;
+  flex-direction: column;
+  width: 404px;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+}
+
+.categories .card-5 {
+  height: 366px;
+  top: 306px;
+  left: 109px;
+  display: flex;
+  flex-direction: column;
+  width: 404px;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+}
+
+.categories .card-6 {
+  height: 366px;
+  top: 306px;
+  left: 548px;
+  display: flex;
+  flex-direction: column;
+  width: 404px;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+}
+
+.categories .card-7 {
+  height: 366px;
+  top: 306px;
+  left: 987px;
+  display: flex;
+  flex-direction: column;
+  width: 404px;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+}
+
+.categories .card-8 {
+  top: 708px;
+  left: 109px;
+  display: flex;
+  flex-direction: column;
+  width: 404px;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+}
+
+.categories .card-9 {
+  height: 366px;
+  top: 704px;
+  left: 548px;
+  display: flex;
+  flex-direction: column;
+  width: 404px;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+}
+
+.categories .card-10 {
+  height: 366px;
+  top: 704px;
+  left: 987px;
+  display: flex;
+  flex-direction: column;
+  width: 404px;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+}
