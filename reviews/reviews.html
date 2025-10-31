@@ -10,6 +10,15 @@
   <body>
     <div class="reviews">
       <div class="article-title"><p class="text-wrapper">Read Reviews</p></div>
+      <div style="text-align:center; margin: 20px 0;">
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search reviews..."
+          style="padding:10px; width:60%; font-size:16px; border:2px solid #000; border-radius:6px;"
+        >
+      </div>
+
       <div class="navigation-footer">
         <div class="items">
           <div class="div">Topic</div>
@@ -72,7 +81,7 @@
       <div class="article-title-2">
         <div class="frame">
           <div class="div-wrapper">
-            <div class="div-wrapper"><div class="text-wrapper-4">Pride and Prejudice</div></div>
+            <div class="div-wrapper"><div class="text-wrapper-4 review-title">Pride and Prejudice</div></div>
           </div>
         </div>
         <div class="text-wrapper-5">Author: Jane Austen</div>
@@ -89,7 +98,7 @@
       </a>
         </div>
       <div class="article-title-3">
-        <div class="text-wrapper-4">Gone Girl</div>
+        <div class="text-wrapper-4 review-title">Gone Girl</div>
         <div class="text-wrapper-5">Author: Gillian Flynn</div>
         <div class="text-wrapper-8">Review by Rahul Sharma</div>
       </div>
@@ -97,13 +106,13 @@
         <img class="img" src="p3.png" /> <img class="image-3" src="p3.png" />
       </div>
       <div class="article-title-4">
-        <p class="text-wrapper-4">The Fault In Our Stars</p>
+        <p class="text-wrapper-4 review-title">The Fault In Our Stars</p>
         <div class="text-wrapper-5">Author: John Green</div>
         <div class="text-wrapper-8">Review by Sophia Reynolds</div>
       </div>
       <img class="image-9" src="p7.png" />
       <div class="article-title-5">
-        <p class="text-wrapper-4">Harry Potter and the Philosopher’s Stone</p>
+        <p class="text-wrapper-4 review-title">Harry Potter and the Philosopher’s Stone</p>
         <div class="text-wrapper-5">Author: J.K. Rowling</div>
         <div class="text-wrapper-8">Review by&nbsp;&nbsp;Hannah Lee</div>
       </div>
@@ -111,19 +120,19 @@
         <img class="image-11" src="p5.png" /> <img class="image-3" src="p5.png" />
       </div>
       <div class="article-title-6">
-        <div class="text-wrapper-4">Man’s Search For Meaning</div>
+        <div class="text-wrapper-4 review-title">Man’s Search For Meaning</div>
         <div class="text-wrapper-5">Author: Viktor E. Frankl</div>
         <div class="text-wrapper-8">Review by Abhishek dymna</div>
       </div>
       <div class="article-title-7">
-        <p class="text-wrapper-4">They Both Die At The End</p>
+        <p class="text-wrapper-4 review-title">They Both Die At The End</p>
         <div class="text-wrapper-5">Author: Adam Silvera</div>
         <div class="text-wrapper-8">Review by Lucas Anderson</div>
       </div>
       <img class="image-12" src="p4.png" />
       <div class="article-title-8">
         <div class="frame">
-          <div class="div-wrapper"><div class="text-wrapper-4">The Burnout</div></div>
+          <div class="div-wrapper"><div class="text-wrapper-4 review-title">The Burnout</div></div>
         </div>
         <div class="text-wrapper-5">Author: Sophie Kinsella</div>
         <div class="text-wrapper-8">Review by Sarah Mitchell</div>
@@ -148,5 +157,26 @@
         </div>
       </div>
     </div>
+
+    <script>
+    const searchInput = document.getElementById("searchInput");
+
+    searchInput.addEventListener("keyup", function () {
+      const val = searchInput.value.toLowerCase();
+      const titles = document.querySelectorAll(".text-wrapper-4, .text-wrapper-14"); 
+
+      titles.forEach(title => {
+        const reviewBox = title.closest("div").parentElement; 
+        const text = title.textContent.toLowerCase();
+
+        if (text.includes(val)) {
+          reviewBox.style.display = "";
+        } else {
+          reviewBox.style.display = "none";
+        }
+      });
+    });
+    </script>
+
   </body>
 </html>

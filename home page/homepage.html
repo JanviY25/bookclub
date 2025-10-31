@@ -174,106 +174,103 @@
         </div>
       </div>
     </div>
-<script>
-// ---------- OOP IMPLEMENTATION ----------
+    <script>
+    // ---------- OOP IMPLEMENTATION ----------
+    // Class representing a Book
+    class Book {
+      constructor(title, author, why, description, image) {
+        this.title = title;
+        this.author = author;
+        this.why = why;
+        this.description = description;
+        this.image = image; // ✅ store image
+      }
 
-// Class representing a Book
-class Book {
-  constructor(title, author, why, description, image) {
-    this.title = title;
-    this.author = author;
-    this.why = why;
-    this.description = description;
-    this.image = image; // ✅ store image
-  }
+      getFullTitle() {
+        return `${this.title} - by ${this.author}`;
+      }
+    }
 
-  getFullTitle() {
-    return `${this.title} - by ${this.author}`;
-  }
-}
+    // Class to manage the "Book of the Month" feature
+    class BookOfTheMonthManager {
+      constructor(books) {
+        this.books = books;
+      }
 
-// Class to manage the "Book of the Month" feature
-class BookOfTheMonthManager {
-  constructor(books) {
-    this.books = books;
-  }
+      // Pick a random book
+      getRandomBook() {
+        const index = Math.floor(Math.random() * this.books.length);
+        return this.books[index];
+      }
 
-  // Pick a random book
-  getRandomBook() {
-    const index = Math.floor(Math.random() * this.books.length);
-    return this.books[index];
-  }
+      // Update the Book of the Month section in HTML
+      displayBook(book) {
+        document.querySelector(".text-wrapper-14").textContent = book.getFullTitle();
+        document.querySelectorAll(".text-wrapper-14")[1].textContent = book.why;
+        document.querySelectorAll(".text-wrapper-8")[document.querySelectorAll(".text-wrapper-8").length - 1].textContent = book.description;
 
-  // Update the Book of the Month section in HTML
-  displayBook(book) {
-    document.querySelector(".text-wrapper-14").textContent = book.getFullTitle();
-    document.querySelectorAll(".text-wrapper-14")[1].textContent = book.why;
-    document.querySelectorAll(".text-wrapper-8")[document.querySelectorAll(".text-wrapper-8").length - 1].textContent = book.description;
+        // ✅ update the image too
+        document.querySelector(".image-6").src = book.image;
+      }
+    }
 
-    // ✅ update the image too
-    document.querySelector(".image-6").src = book.image;
-  }
-}
+    // Create book objects
+    const books = [
+      new Book(
+        "The Alchemist",
+        "Paulo Coelho",
+        "A timeless modern classic about dreams, self-discovery, and following your heart.",
+        "This inspiring novel tells the story of Santiago, a shepherd boy who embarks on a journey to find his treasure.",
+        "p5.png"
+      ),
 
-// Create book objects
-const books = [
-  new Book(
-    "The Alchemist",
-    "Paulo Coelho",
-    "A timeless modern classic about dreams, self-discovery, and following your heart.",
-    "This inspiring novel tells the story of Santiago, a shepherd boy who embarks on a journey to find his treasure.",
-    "p5.png"
-  ),
+      new Book(
+        "Project Hail Mary",
+        "Andy Weir",
+        "A gripping sci-fi survival story filled with humor and heart.",
+        "Ryland Grace wakes up alone on a spaceship — humanity’s last hope to save Earth from extinction.",
+        "j1.jpg"
+      ),
 
-  new Book(
-    "Project Hail Mary",
-    "Andy Weir",
-    "A gripping sci-fi survival story filled with humor and heart.",
-    "Ryland Grace wakes up alone on a spaceship — humanity’s last hope to save Earth from extinction.",
-    "j1.jpg"
-  ),
+      new Book(
+        "It Ends With Us",
+        "Colleen Hoover",
+        "An emotional and raw story about love, strength, and resilience.",
+        "Lily Bloom’s life changes when she meets Ryle, but her past resurfaces in heartbreaking ways.",
+        "j5.jpg"
+      ),
 
-  new Book(
-    "It Ends With Us",
-    "Colleen Hoover",
-    "An emotional and raw story about love, strength, and resilience.",
-    "Lily Bloom’s life changes when she meets Ryle, but her past resurfaces in heartbreaking ways.",
-    "j5.jpg"
-  ),
+      new Book(
+        "Atomic Habits",
+        "James Clear",
+        "A life-changing guide on how small habits make a big impact.",
+        "Practical strategies to build good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.",
+        "j2.png"
+      ),
 
-  new Book(
-    "Atomic Habits",
-    "James Clear",
-    "A life-changing guide on how small habits make a big impact.",
-    "Practical strategies to build good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.",
-    "j2.png"
-  ),
+      new Book(
+        "Circe",
+        "Madeline Miller",
+        "A myth retelling that celebrates independence and power.",
+        "Circe, a minor goddess and witch, tells her own story — a journey of transformation, defiance, and self-discovery.",
+        "j3.jpg"
+      ),
 
-  new Book(
-    "Circe",
-    "Madeline Miller",
-    "A myth retelling that celebrates independence and power.",
-    "Circe, a minor goddess and witch, tells her own story — a journey of transformation, defiance, and self-discovery.",
-    "j3.jpg"
-  ),
+      new Book(
+        "The Silent Patient",
+        "Alex Michaelides",
+        "A psychological thriller that will keep you guessing until the end.",
+        "Alicia Berenson, a famous painter, shoots her husband and never speaks again — a therapist is determined to uncover why.",
+        "j4.jpg"
+      )
+    ];
 
-  new Book(
-    "The Silent Patient",
-    "Alex Michaelides",
-    "A psychological thriller that will keep you guessing until the end.",
-    "Alicia Berenson, a famous painter, shoots her husband and never speaks again — a therapist is determined to uncover why.",
-    "j4.jpg"
-  )
-];
+    // Initialize manager and update book of the month
+    const manager = new BookOfTheMonthManager(books);
+    const selectedBook = manager.getRandomBook();
+    manager.displayBook(selectedBook);
 
-// Initialize manager and update book of the month
-const manager = new BookOfTheMonthManager(books);
-const selectedBook = manager.getRandomBook();
-manager.displayBook(selectedBook);
-
-console.log("Book of the Month:", selectedBook.getFullTitle());
-</script>
-
-
+    console.log("Book of the Month:", selectedBook.getFullTitle());
+    </script>
   </body>
 </html>
