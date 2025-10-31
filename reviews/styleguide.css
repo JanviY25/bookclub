@@ -1,7 +1,7 @@
 :root {
   --title-font-family: "Inter", Helvetica;
   --title-font-weight: 700;
-  --title-font-size: 64px;
+  --title-font-size: 50px;
   --title-letter-spacing: -1.28px;
   --title-line-height: normal;
   --title-font-style: normal;
@@ -25,5 +25,5 @@
   --body-text-font-style: normal;
   --button-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
   --variable-collection-spacing-s: 24px;
-  --variable-collection-spacing-m: 48px;
+  --variable-collection-spacing-m: 24px;
 }

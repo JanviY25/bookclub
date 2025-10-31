@@ -10,6 +10,7 @@
 .reviews .article-title {
   display: flex;
   flex-direction: column;
+  font-size: 64px;
   width: 50.90%;
   align-items: flex-start;
   justify-content: center;
@@ -27,7 +28,6 @@
   font-family: var(--title-font-family);
   font-weight: var(--title-font-weight);
   color: #000000;
-  font-size: var(--title-font-size);
   letter-spacing: var(--title-letter-spacing);
   line-height: var(--title-line-height);
   font-style: var(--title-font-style);
