@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <button id="themeToggle" style="
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    ">🌙 Dark Mode</button>
+
+
     <div class="home-page">
       <div class="text-wrapper">Recommendations by our Users</div>
       <div class="cards">
@@ -74,7 +87,6 @@
           </div>
           <div class="text-wrapper-5">Beyond The Pages</div>
           <img class="social-icons" src="footer.png" />
-          <img class="divider" src="divider.png" />
         </div>
       </div>
       <section class="carousel-container">
@@ -271,6 +283,31 @@
     manager.displayBook(selectedBook);
 
     console.log("Book of the Month:", selectedBook.getFullTitle());
+
+
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+
+    const btn = document.getElementById("themeToggle");
+
+    if (btn) {
+      function updateBtn() {
+        btn.textContent = document.body.classList.contains("dark-mode")
+          ? "☀️"
+          : "🌙";
+      }
+
+      updateBtn();
+
+      btn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        const theme = document.body.classList.contains("dark-mode") ? "dark" : "light";
+        localStorage.setItem("theme", theme);
+        updateBtn();
+      });
+    }
+
     </script>
   </body>
 </html>
