@@ -159,37 +159,3 @@ function populateArticles(articles) {
     }
   });
 }
-// ---------- SEARCH FEATURE ----------
-document.addEventListener("DOMContentLoaded", () => {
-  const searchInput = document.getElementById("searchInput");
-  const noResults = document.getElementById("noResults");
-
-  if (!searchInput) return;
-
-  searchInput.addEventListener("input", function () {
-    const query = this.value.toLowerCase().trim();
-    const articleDivs = document.querySelectorAll(".reviews [class^='article-title']");
-    let matchCount = 0;
-
-    articleDivs.forEach(article => {
-      const text = article.textContent.toLowerCase();
-      const relatedImage =
-        article.previousElementSibling && article.previousElementSibling.classList.contains("image-wrapper")
-          ? article.previousElementSibling
-          : article.nextElementSibling;
-
-      // Match by title, author, or reviewer
-      if (text.includes(query) || query === "") {
-        article.style.display = "";
-        if (relatedImage) relatedImage.style.display = "";
-        matchCount++;
-      } else {
-        article.style.display = "none";
-        if (relatedImage) relatedImage.style.display = "none";
-      }
-    });
-
-    // Show or hide "no results"
-    noResults.style.display = matchCount === 0 ? "block" : "none";
-  });
-});
